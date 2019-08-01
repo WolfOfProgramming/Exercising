@@ -1,0 +1,30 @@
+html {
+    background-color: aquamarine;
+}
+span {
+    color: blanchedalmond;
+}
+h1,h3,ul {
+    text-align: center;
+}
+form {
+    text-align: center;
+}
+.mainTitle {
+    font-size: 105px;
+}
+.description {
+    font-size: 75px;
+    color: hsl(0, 0%, 10%);
+}
+#AddThingToDo {
+    height: 40px;
+    width: 600px;
+}
+#sumbit {
+    height: 40px;
+    width: 40px;
+}
+li {
+    font-size: 50px;
+}
