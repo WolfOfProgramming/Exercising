@@ -1,6 +1,5 @@
-const el = document.getElementById("sumbit");
-document.getElementById("sumbit").preventDefault();
-el.addEventListener("sumbit", addThing, false);
+const el = document.getElementById("submit");
+el.addEventListener("submit", addThing, false).preventDefault();
 
 function addThing() {
     const elValue = document.getElementById("AddThingToDo").value;
