@@ -1,11 +1,10 @@
-let el = document.getElementById("sumbit");
+const el = document.getElementById("sumbit");
 el.addEventListener("click", addThing, false);
 
 function addThing() {
     
-    let elValue = document.getElementById("AddThingToDo").value;
-    let li = document.createElement("li");
-    let content = document.createTextNode(elValue);
-    li.appendChild(content);
+    const elValue = document.getElementById("AddThingToDo").value;
+    const li = document.createElement("li");
+    li.textContent = elValue;
     document.getElementById("list").appendChild(li);
 }
