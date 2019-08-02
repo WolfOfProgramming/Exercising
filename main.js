@@ -1,8 +1,8 @@
 
 const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
-    addThing();
     event.preventDefault();
+    addThing();
     }, false);
 
 function addThing() {
