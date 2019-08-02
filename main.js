@@ -1,5 +1,8 @@
 const el = document.getElementById("submit");
-el.addEventListener("submit", addThing, false);
+el.addEventListener("submit", (event) => {
+    event.preventDefault();
+    addThing()                      
+    }, false);
 
 function addThing() {
     const elValue = document.getElementById("AddThingToDo").value;
