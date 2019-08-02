@@ -1,7 +1,7 @@
 const el = document.getElementById("submit");
 el.addEventListener("submit", addThing, false);
 const form = document.getElementById("form");
-form.addEventListener("onsubmit", (event) => {event.preventDefault();}, false);
+form.addEventListener("submit", (event) => {event.preventDefault();}, false);
 
 function addThing() {
     const elValue = document.getElementById("AddThingToDo").value;
