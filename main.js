@@ -21,8 +21,10 @@ function addThing() {
     });
     buttonEdit.textContent = "Edit";
 
+    const span = document.createElement("span");
     const li = document.createElement("li");
-    li.textContent = elValue;
+    li.appendChild(span);
+    li.firstChild.textContent = elValue;
     li.appendChild(buttonDelete);
     li.appendChild(buttonEdit);
 
@@ -61,6 +63,6 @@ function editElement(child) {
 }
 function addNewContent(el, button) {
     const buttonParent = button.parentNode;
-    el.textContent = buttonParent.firstChild.value;
+    el.firstChild.textContent = buttonParent.firstChild.value;
     deleteElement(button);
 }
