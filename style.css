@@ -2,6 +2,7 @@ html {
     background-color: azure;
     font-family: 'Nunito Sans', sans-serif;
     background: linear-gradient(225deg, hsl(150, 40%, 50%), hsl(78, 40%, 50%));
+    height: 100%;
 }
 span {
     color: blanchedalmond;
