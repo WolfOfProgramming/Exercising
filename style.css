@@ -35,7 +35,7 @@ li {
     width: 600px;
     margin: 5px;
     border: 0;
-    
+    border-radius: 25px;
 }
 #submit {
     width: 100px;
@@ -56,6 +56,7 @@ div input {
     width: 600px;
     margin: 5px;
     border: 0;
+    border-radius: 25px;
 }
 li button, div button {
     margin: 5px;
