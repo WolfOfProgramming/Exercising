@@ -1,5 +1,7 @@
 html {
-    background-color: aquamarine;
+    background-color: azure;
+    font-family: 'Nunito Sans', sans-serif;
+    background: linear-gradient(225deg, hsl(150, 40%, 50%), hsl(78, 40%, 50%));
 }
 span {
     color: blanchedalmond;
@@ -10,8 +12,12 @@ h1,h3,ul {
 form {
     text-align: center;
 }
+li {
+    font-size: 50px;
+}
 .mainTitle {
-    font-size: 105px;
+    font-size: 100px;
+    margin-bottom: -70px;
 }
 .description {
     font-size: 75px;
@@ -20,11 +26,21 @@ form {
 #AddThingToDo {
     height: 40px;
     width: 600px;
+    margin: 10px;
 }
 #submit {
     height: 40px;
     width: 40px;
 }
-li {
-    font-size: 50px;
+form input, div button, li button {
+    border: 2px solid hsl(230, 50%, 50%);
+    color: hsl(230, 50%, 50%);
+}
+div input {
+    height: 40px;
+    width: 600px;
+}
+li button, div button {
+    margin: 5px;
+    height: 40px;
 }
