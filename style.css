@@ -30,13 +30,6 @@ li {
 .do {
     color: hsl(0, 66%, 57%)
 }
-#AddThingToDo {
-    height: 50px;
-    width: 600px;
-    margin: 5px;
-    border: 0;
-    border-radius: 25px;
-}
 #submit {
     width: 100px;
 }
@@ -51,12 +44,14 @@ li {
     background-color: hsl(232, 53%, 45%);
     cursor: pointer;
 }
-div input {
+div input, #AddThingToDo  {
     height: 50px;
     width: 600px;
     margin: 5px;
     border: 0;
     border-radius: 25px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 li button, div button {
     margin: 5px;
