@@ -5,6 +5,7 @@ form.addEventListener("submit", (event) => {
     }, false);
 
 const el = document.getElementById("AddThingToDo");
+const list = document.getElementById("list");
 
 function addButtonDelete(element, content) {
     const button =  document.createElement('button');
@@ -47,7 +48,7 @@ function addThing() {
     li.appendChild(buttonDelete);
     li.appendChild(buttonEdit);
 
-    document.getElementById("list").appendChild(li);
+    list.appendChild(li);
 }
 
 function deleteElement(element) {
