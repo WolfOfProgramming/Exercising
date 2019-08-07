@@ -1,28 +1,48 @@
 const form = document.getElementById("form");
+const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     addThing();
     }, false);
 
+const el = document.getElementById("AddThingToDo");
+
+function addButtonDelete(element, content) {
+    const button =  document.createElement('button');
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        deleteElement(element);
+    });
+    button.textContent = content;
+    return button;
+}
+function addButtonEdit(element) {
+    const button =  document.createElement('button');
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        editElement(element);
+    });
+    button.textContent = "Edit";
+    return button;
+}
+function addButtonConfirm(element, divEl) {
+    const button = document.createElement("button");
+    button.addEventListener("click", (event) => {
+        event.preventDefault();
+        addNewContent(element, divEl);
+    })
+    button.textContent = "Confirm";
+    return button;
+}
+
 function addThing() {
-    const elValue = document.getElementById("AddThingToDo").value;
 
-    const buttonDelete = document.createElement('button');
-    buttonDelete.addEventListener("click", (event) => {
-        event.preventDefault();
-        deleteElement(buttonDelete);
-    });
-    buttonDelete.textContent = "Delete";
-
-    const buttonEdit = document.createElement('button');
-    buttonEdit.addEventListener("click", (event) => {
-        event.preventDefault();
-        editElement(buttonEdit);
-    });
-    buttonEdit.textContent = "Edit";
-
-    const span = document.createElement("span");
+    const elValue = el.value;
     const li = document.createElement("li");
+    const buttonDelete = addButtonDelete(li, "Delete");
+    const buttonEdit = addButtonEdit(li);
+    const span = document.createElement("span");
+
     li.appendChild(span);
     li.firstChild.textContent = elValue;
     li.appendChild(buttonDelete);
@@ -31,38 +51,23 @@ function addThing() {
     document.getElementById("list").appendChild(li);
 }
 
-function deleteElement(child) {
-   const parent = child.parentNode;
-   parent.remove();
+function deleteElement(element) {
+   element.remove();
 }
 
-function editElement(child) {
-    const parent = child.parentNode; //li
+function editElement(element) {
+
     const input = document.createElement("input");
-
-    const buttonConfirm = document.createElement("button");
-    buttonConfirm.addEventListener("click", (event) => {
-        event.preventDefault();
-        addNewContent(parent, buttonConfirm);
-    })
-    buttonConfirm.textContent = "Confirm";
-
-
-    const buttonCancel = document.createElement("button");
-    buttonCancel.addEventListener("click", (event) => {
-        event.preventDefault();
-        deleteElement(buttonCancel);
-    })
-    buttonCancel.textContent = "Cancel";
-
     const div = document.createElement("div");
+    const buttonConfirm = addButtonConfirm(element, div);
+    const buttonCancel = addButtonDelete(div, "Cancel");
+
     div.appendChild(input);
     div.appendChild(buttonCancel);
     div.appendChild(buttonConfirm);
     document.getElementById("form").appendChild(div);
 }
-function addNewContent(el, button) {
-    const buttonParent = button.parentNode;
-    el.firstChild.textContent = buttonParent.firstChild.value;
-    deleteElement(button);
+function addNewContent(element, divEl) {
+    element.firstChild.textContent = divEl.firstChild.value;
+    deleteElement(divEl);
 }
