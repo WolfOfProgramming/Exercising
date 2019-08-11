@@ -5,9 +5,10 @@ html {
     height: 100%;
 }
 span {
-    color: hsl(0, 4%, 5%)
+    color: hsl(0, 4%, 5%);
+    margin-right: 30px;
 }
-h1,h3,ul {
+h1, h2{
     text-align: center;
 }
 form {
@@ -15,20 +16,28 @@ form {
 }
 li {
     font-size: 50px;
+    height: 60px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .mainTitle {
     font-size: 100px;
     margin-bottom: -70px;
+    margin-right: 0px;
 }
 .description {
     font-size: 75px;
     color: hsl(0, 0%, 10%);
 }
 .to {
-    color: hsl(36, 66%, 45%)
+    color: hsl(36, 66%, 45%);
+    margin-right: 0;
 }
 .do {
-    color: hsl(0, 66%, 57%)
+    color: hsl(0, 66%, 57%);
+    margin-right: 0;
 }
 #submit {
     width: 100px;
