@@ -58,6 +58,7 @@ function deleteElement(element) {
 function editElement(element) {
 
     const input = document.createElement("input");
+    input.setAttribute("placeholder", "Edit your task");
     const div = document.createElement("div");
     const buttonConfirm = addButtonConfirm(element, div);
     const buttonCancel = addButtonDelete(div, "Cancel");
